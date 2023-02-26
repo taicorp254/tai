@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>TAI</title>
+<link rel="icon" href="favicon.ico" />
+<link href = "bootstrap-5.0.0-beta3-dist/css/bootstrap.css" rel = "stylesheet">
+<link href = "bootstrap-5.0.0-beta3-dist/css/bootstrap.min.css" rel = "stylesheet">
+<link href = "bootstrap-5.0.0-beta3-dist/css/bootstrap-utilities.css" rel = "stylesheet">
+<link href = "css/Style.css" rel = "stylesheet">
+
+<meta name = "viewport" content = "device-width, initial-scale = 1.0">
+
+</head>
+<body>
+
+<div class = "container" id = "overall_background">
+    <div class = "float-child-element" id = "overall_background2">
+        <div class = "column" id = "cde">
+            <div id = "div1" class = "row-md-6">
+                <h1 id="mainTitle">Welcome to TAI</h1></br>
+                <h3 style="color:#c2e9fb;margin-left:30px;">Redefining Forests</h3>
+                <div id="my-form">
+                    <form action="./Home_page.html" class="form_container" >
+                        <h2>Login</h2>
+                        <label><b>Email</b></label><br/>
+                        <input type="text" name="email" placeholder="Enter Email" required/><br/>
+                        <label><b>Password</b></label><br/>
+                        <input type="password" name="psw" placeholder="Enter Password" required/><br/>
+                        <button style="margin-top:10px;" type = "submit" class="btn">Login</button><br/>
+                        <button type = "button" class="btn-cancel" onclick="closeForm();">Cancel</button>
+                    </form>
+                </div>
+                <div id="my-form2">
+                    <form action="./Home_page.html" class="form_container" >
+                        <h2>Sign-Up</h2>
+                        <label><b>Email</b></label><br/>
+                        <input type="text" name="email" placeholder="Enter Email" required/><br/>
+                        <label><b>Username</b></label><br/>
+                        <input type="username" name="name" placeholder="Enter Username" required/><br/>
+                        <label><b>Phone</b></label><br/>
+                        <input type="text" name="number" placeholder="+2547********" required/><br/>
+                        <label><b>Password</b></label><br/>
+                        <input type="password" name="psw" placeholder="Enter Password" required/><br/>
+                        <button style="margin-top:10px;" type = "submit" class="btn">Join</button>
+                        <button type = "button" class="btn-cancel" onclick="closeForm2();">Cancel</button>
+                    </form>
+                </div>
+                <p id="mainDescription">%document the main description here%</p>>
+                <button onclick = "openForm();" id = "buttonStyleLogin">LOGIN</button>
+                <button onclick = "openForm2();" id = "buttonStyleSignup">SIGN-UP</button><br/>
+                <button onclick = "window.location.href = '#activities'" class="page-direction"><img class="page-direction-image" src="./img/downArrow.PNG"/></button>
+            </div>
+
+            <div id = "activities" class = "row-md-6">
+                <h2 style="text-align:center; color:#a1c4fd;text-decoration:underline;"><strong>What Is A TAI?</strong></h2><br/>
+                <p>Our name is a mirrored abbreviation of the words, "Invest A Tree". (Very looong wierd pause...) Wait! isn't the abbreviation for that IAT? Well, it should be, but I'm pretty sure the founder heard IAT in a movie somewhere and was afraid of a copyright lawsuit. Abbreviations aside, what is this platform doing on the internet? We can best explain IAT, wait no, TAI in three crucial parts:</p>
+                <h3 class="goalsSubtitles">Carbon Credits Trading</h3>
+                <p>A clear transparent and easy to use platform</p>
+                <hr/><h3 class="goalsSubtitles">Fundraising</h3>
+                <p>An easier way to raise funds for your tree planting efforts and receive information on amount raised in real time</p>
+                <hr/><h3 class="goalsSubtitles">Tree(s) Management</h3>
+                <p>Readily accessible information on a variety of trees including: environmental requirements, maturity and their offsetting capabilities.</p>
+                <hr/><button onclick = "window.location.href = '#users'" class="page-direction"><img  class="page-direction-image" src="./img/downArrow.PNG"/></button>
+            </div>
+
+            <div id = "users" class = "row-md-6">
+                <h2 style="text-align:center; color:#a3bded;text-decoration:underline;"><strong>OUR TARGET GROUPS</strong></h2><br/><br/>
+                <h3 class="benefitsSubtitles">Farmers And Tree Campaigners</h3>
+                <p>Users can register their products and projects for consideration and verification to be considered in carbon trading</p>
+                <hr/><h3 class="benefitsSubtitles">Researchers And Tree Enthusiasts</h3>
+                <p>For a fee, they can access information about tree research and relevant materials needed.</p>
+                <hr/><h3 class="benefitsSubtitles">Environmentalists</h3>
+                <p>These groups can create a tree growing fundraiser where people can donate. Tai will then charge a certain percentage on the amount raised.</p>
+                <hr/><button onclick = "window.location.href = '#goals'" class="page-direction"><img  class="page-direction-image" src="./img/downArrow.PNG"/></button>
+            </div>
+
+            <div id = "goals" class = "row-md-6">
+                <h2 style="text-align:center; color:#a3bded;text-decoration:underline;"><strong>OUR GOALS</strong></h2><br/><br/>
+                <h3 class="goalsSubtitles">Tree Fundraiser Prompt</h3>
+                <p>Allows campaigners to create a funding call for investment and donations in their tree planting campaigns</p>
+                <hr/><h3 class="goalsSubtitles">Tree Management Prompt</h3>
+                <p>Allows access to tree information including: history, type, areas suitable for growth and amount of CO<sub>2</sub> offset by the tree</p>
+                <hr/><h3 class="goalsSubtitles">Carbon Credits Trading Prompt</h3>
+                <p>Allow corporations to get carbon credits certificates at a fee and certification of the tree growers to trade their offsets for money</p>
+                <hr/><button onclick = "window.location.href = '#benefits'" class="page-direction"><img  class="page-direction-image" src="./img/downArrow.PNG"/></button>
+            </div>
+            <div id = "benefits" class = "row-md-6">
+                <h2 style="text-align:center; color:#a3bded;text-decoration:underline;"><strong>WHY US?</strong></h2><br/><br/>
+                <h3 class="benefitsSubtitles">Increased Income</h3>
+                <p>Farmers get compensated for their efforts towards a clean and green planet</p>
+                <hr/><h3 class="benefitsSubtitles">Simplified Tree Planting Campaigns</h3>
+                <p>From funding, to access, to information, tree planting campaigns couldn't get any easier</p>
+                <hr/><h3 class="benefitsSubtitles">Liberating the Carbon Trading Market in the Country</h3>
+                <p>Everyone can trade, everyone can buy. It's clear and transparent</p>
+                <hr/><button onclick = "window.location.href = '#newsL'" class="page-direction"><img  class="page-direction-image" src="./img/downArrow.PNG"/></button>
+            </div>
+
+            <div id = "newsL" class = "row-md-6">
+                <div id = "newsletter">
+                    <h3 class="benefitsSubtitles">Register below to receive our newsletters</h3></br>
+                    <button id="buttonStyleNewsletter" onclick = "openForm3();">Register</button>
+                </div>
+                <div id="my-form3">
+                        <form action="./Home_page.html" class="form_container" method = "POST">
+                            <h2 style="color:black">Register below to receive our newsletters</h2>
+                            <input type = "text" size = "40" placeholder = "Enter Name" /></br>
+                            <input type = "text" size = "40" placeholder = "Email e.g johndoe@gmail.com"></br>
+                            <button type = "submit" value = "Submit" class="btn" onclick = "sentConfirm();">Register</button><!--onsubmit = ""-->
+                            <button type = "button" class="btn-cancel" onclick="closeForm3();">Cancel</button>
+                        </form>
+                    </div>
+                <div style="text-align:left">
+                    <button onclick = "window.location.href = '#contacts'" class="page-direction">
+                        <img  class="page-direction-image" src="./img/downArrow.PNG"/>
+                    </button>
+                </div>
+            </div>
+            <div id = "contacts" class = "row-md-6">
+                <h2 style="text-align:center">Contact Us For More</h2>
+                <p><address style = "font-family:sans-serif;">
+                <table>
+                    <tr>
+                        <td><a class="contactsText" href = "mailto:taim@gmail.com" target = "_blank"><img class="contactsIcons" src="./img/gmail.PNG"/>Gmail</a></td>
+                        <td><a class="contactsText" href = "twitter.com/account/@TAI" target = "_blank"><img class="contactsIcons" src="./img/twitter.PNG"/>Twitter</a></td>
+                        <td><a class="contactsText" href = "" target = "_blank"><img class="contactsIcons" src="./img/facebook.PNG"/>Facebook</a></td>
+                        <td><a class="contactsText" href = "tel:+2547********" target = "_blank"><img class="contactsIcons" src="./img/phone.png"/>Phone</a></td>
+                    </tr>
+                </table>
+                </address></p>
+            </div>
+            <div style="text-align:right">
+                <button onclick = "window.location.href = '#cde'" class="page-direction"><img class="page-direction-image" alt="Back to the top" src="./img/upArrow.PNG"/>Back To The Top</button>
+            </div>
+        </div>
+    </div>
+    <div class = "float-child-element" style="text-align:center" id="navbar_background">
+        <div class="dropdown">
+            <button id="menu-button"><img src="img/menuBar.png" id="menu-bar" alt = "menu-bar"/></button>
+            <div class="dropdown-content">
+                <div style="padding-top:5px;"></div>
+                <a class="navBarItem1" href = "#cde">Home</a><br/><br/>
+                <a class="navBarItem1" href = "#activities">About Us</a><br/><br/>
+                <a class="navBarItem1" onclick = "openForm();">Login</a><br/><br/>
+                <a class="navBarItem1" href = "projects.html">Projects</a><br/><br/>
+                <a class="navBarItem1" href = "#contacts">Contact Us</a><br/><br/>
+                <div style="padding-bottom:5px;"></div>
+            </div>
+        </div>
+    </div>
+</div>
+<script type = "text/javascript">
+function sentConfirm()
+{
+	alert("You Will Now Receive Newsletters From TAI!");
+}
+function openForm()
+{
+	document.getElementById("my-form").style.display="block";
+}
+function closeForm()
+{
+	document.getElementById("my-form").style.display="none";
+}
+function openForm2()
+{
+	document.getElementById("my-form2").style.display="block";
+}
+function closeForm2()
+{
+	document.getElementById("my-form2").style.display="none";
+}
+function openForm3()
+{
+	document.getElementById("my-form3").style.display="block";
+}
+function closeForm3()
+{
+	document.getElementById("my-form3").style.display="none";
+}
+var dt = Date();
+document.write("Date and Time : " + dt );
+</script>
+</body>
+</html>
