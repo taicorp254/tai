@@ -81,8 +81,8 @@ body{
 
 #div1{
     background-image:url("../img/img1.jpg");
-    background-size:100%;
     background-repeat:no-repeat;
+    background-size: cover;
     box-shadow:inset 2px -2px 2px, inset -2px 2px 2px ;
     text-align:left;
     padding-bottom:5px;
