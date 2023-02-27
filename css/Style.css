@@ -142,9 +142,14 @@ body{
     height:100%;
 }
 #benefits {
-    background-size:100%;
+    background-size:cover;
     background-repeat:no-repeat;
     background-image:url("../img/img2.jpeg");
+
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+	
     box-shadow:inset 2px -2px 2px, inset -2px 2px 2px ;
     filter:drop-shadow(3px 3px 3px #e2ebf0) opacity(99%);
     text-align:left;
@@ -161,7 +166,10 @@ body{
     padding-bottom:5px;
     font-size:20px;
     height:100%;
-    background-size:150%;
+    background-size:cover;
+	-webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
     background-repeat:no-repeat;
     background-image:url("../img/img4.PNG");
     box-shadow:inset 2px -2px 2px, inset -2px 2px 2px ;
@@ -216,7 +224,10 @@ body{
     padding:20px;
     font-size:20px;
     height:100%;
-    background-size:100%;
+    background-size:cover;
+	-webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
     background-repeat:no-repeat;
     background-image:url("../img/img5.PNG");
 }
