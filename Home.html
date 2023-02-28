@@ -12,11 +12,25 @@
 
 </head>
 <body>
-
+<div style="text-align:center" id="navbar_background">
+    <div class="navbar">
+        <div class="navbar-content">
+            <ul class="menu">
+                <li><a class="active" href = "#overall_background2">Home</a></li>
+                <li><a href = "#activities">About Us</a></li>
+                <li><a href = "#cde">Login</a></li>
+                <li><a href = "#">Projects</a></li>
+                <li><a href = "#contacts">Contact Us</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
 <div class = "container" id = "overall_background">
-    <div class = "float-child-element" id = "overall_background2">
+<hr/>
+    <div id = "overall_background2">
         <div class = "column" id = "cde">
             <div id = "div1" class = "row-md-6">
+	    <div class="slideshow">
                 <h1 id="mainTitle">Welcome to TAI</h1></br>
                 <h3 style="color:#c2e9fb;margin-left:30px;">Invest A Tree</h3>
                 <div id="my-form">
@@ -51,9 +65,9 @@
             </div>
 
             <div id = "activities" class = "row-md-6">
-                <h2 style="text-align:center; color:#a1c4fd;text-decoration:underline;"><strong>Who Is TAI?</strong></h2><br/>
+                <h2 style="text-align:center; color:green;text-decoration:underline;"><strong>Who Is TAI?</strong></h2><br/>
                 <p>Invest a Tree is a Kenyan-based business that aims to promote sustainable farming practices and combat climate change. 
-			Our decentralzed platform allows individuals and businesses to easily purchase carbon offsets from smallholder farmers in Kenya. 
+			Our decentralized platform allows individuals and businesses to easily purchase carbon offsets from smallholder farmers in Kenya. 
 			In addition, we provide tree management services to ensure the survival and growth of planted trees. 
 			We also offer fundraising option for tree planting campaigns, allowing individuals and organizations to contribute to reforestation 
 			efforts in Kenya.
@@ -71,7 +85,7 @@
             </div>
 
             <div id = "goals" class = "row-md-6">
-                <h2 style="text-align:center; color:#a3bded;text-decoration:underline;"><strong>OUR GOALS</strong></h2><br/><br/>
+                <h2 style="text-align:center; color:green;text-decoration:underline;"><strong>OUR GOALS</strong></h2><br/><br/>
                 <h3 class="goalsSubtitles">Tree Fundraising</h3>
                 <p>Allows campaigners to create a funding call for investment and donations in their tree planting campaigns</p>
                 <hr/><h3 class="goalsSubtitles">Tree Management</h3>
@@ -94,27 +108,27 @@
 
             <div id = "newsL" class = "row-md-6">
                 <div id = "newsletter">
-                    <h3 class="benefitsSubtitles">Register below to receive our newsletters</h3></br>
+                    <h3>Register below to receive our newsletters</h3></br>
                     <button id="buttonStyleNewsletter" onclick = "openForm3();">Register</button>
                 </div>
-                <div id="my-form3">
-                        <form action="./Home_page.html" class="form_container" method = "POST">
-                            <h2 style="color:black">Register below to receive our newsletters</h2>
-                            <input type = "text" size = "40" placeholder = "Enter Name" /></br>
-                            <input type = "text" size = "40" placeholder = "Email e.g johndoe@gmail.com"></br>
-                            <button type = "submit" value = "Submit" class="btn" onclick = "sentConfirm();">Register</button><!--onsubmit = ""-->
-                            <button type = "button" class="btn-cancel" onclick="closeForm3();">Cancel</button>
-                        </form>
-                    </div>
+		<div id="my-form3">
+			<form action="./Home_page.html" class="form_container" method = "POST">
+				<h2 style="color:black">Register below to receive our newsletters</h2>
+				<input type = "text" size = "40" placeholder = "Enter Name" /></br>
+				<input type = "text" size = "40" placeholder = "Email e.g johndoe@gmail.com"></br>
+				<button type = "submit" value = "Submit" class="btn" onclick = "sentConfirm();">Register</button><!--onsubmit = ""-->
+				<button type = "button" class="btn-cancel" onclick="closeForm3();">Cancel</button>
+			</form>
+		</div>
                 <div style="text-align:left">
                 </div>
             </div>
             <div id = "contacts" class = "row-md-6">
-                <h2 style="text-align:center">Contact Us For More</h2>
+                <h2 style="text-align:center;color:#a3bded;">Contact Us For More</h2>
                 <p><address style = "font-family:sans-serif;">
                 <table>
                     <tr>
-                        <td><a class="contactsText" href = "mailto:taim@gmail.com" target = "_blank"><img class="contactsIcons" src="./img/gmail.PNG"/>Gmail</a></td>
+                        <td><a class="contactsText" href = "mailto:taicorp254@gmail.com" target = "_blank"><img class="contactsIcons" src="./img/gmail.PNG"/>Gmail</a></td>
                         <td><a class="contactsText" href = "twitter.com/account/@TAI" target = "_blank"><img class="contactsIcons" src="./img/twitter.PNG"/>Twitter</a></td>
                         <td><a class="contactsText" href = "" target = "_blank"><img class="contactsIcons" src="./img/facebook.PNG"/>Facebook</a></td>
                         <td><a class="contactsText" href = "tel:+2547********" target = "_blank"><img class="contactsIcons" src="./img/phone.png"/>Phone</a></td>
@@ -124,19 +138,6 @@
             </div>
             <div style="text-align:right">
                 <button onclick = "window.location.href = '#cde'" class="page-direction"><img class="page-direction-image" alt="Back to the top" src="./img/upArrow.PNG"/>Back To The Top</button>
-            </div>
-        </div>
-    </div>
-    <div class = "float-child-element" style="text-align:center" id="navbar_background">
-        <div class="navbar">
-            <div class="navbar-content">
-                <ul class="menu">
-                    <li><a class="active" href = "#cde">Home</a></li>
-                    <li><a href = "#activities">About Us</a></li>
-                    <li><a href = "#cde">Login</a></li>
-                    <li><a href = "#">Projects</a></li>
-                    <li><a href = "#contacts">Contact Us</a></li>
-                </ul>
             </div>
         </div>
     </div>
