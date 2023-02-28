@@ -179,7 +179,6 @@ body{
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
-	
     box-shadow:inset 2px -2px 2px, inset -2px 2px 2px ;
     filter:drop-shadow(3px 3px 3px #e2ebf0) opacity(99%);
     text-align:left;
@@ -190,19 +189,18 @@ body{
     color:#cfd9df;
 }
 #users {
-    background-size:100%;
     text-align:left;
     padding-left:20px;
     padding-bottom:5px;
 	padding-top:50px;
     font-size:20px;
     height:100%;
-    background-size:cover;
-	-webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
     background-repeat:no-repeat;
     background-image:url("../img/img4.PNG");
+    background-size: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
     box-shadow:inset 2px -2px 2px, inset -2px 2px 2px ;
     color:#cfd9df;
 }
@@ -253,13 +251,13 @@ body{
     background-color:#c2e9fb;
     padding:20px;
     font-size:20px;
-    height:100%;
-    background-size:cover;
-	-webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
+    height:100%;    
     background-repeat:no-repeat;
     background-image:url("../img/img5.PNG");
+    background-size: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
 }
 .contactsIcons{
     width:40px;
