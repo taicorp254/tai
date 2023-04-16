@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+{% block content %}
+{% load static %}
+<head>
+    <title>TAI</title>
+    <link rel="icon" href="{% static 'myCarbonApp/favicon.ico' %}" />
+    <link href = "{% static 'myCarbonApp/bootstrap-5.0.0-beta3-dist/css/bootstrap.css' %}" rel = "stylesheet">
+    <link href = "{% static 'myCarbonApp/bootstrap-5.0.0-beta3-dist/css/bootstrap.min.css' %}" rel = "stylesheet">
+    <link href = "{% static 'myCarbonApp/bootstrap-5.0.0-beta3-dist/css/bootstrap-utilities.css' %}" rel = "stylesheet">
+    <link href = "{% static 'myCarbonApp/css/Style.css' %}" rel = "stylesheet">
+    <link href = "{% static 'myCarbonApp/css/styleOffsetNow.css' %}" rel = "stylesheet">
+    <link href = "{% static 'myCarbonApp/css/styleUserProfile.css' %}" rel = "stylesheet">
+    <meta name = "viewport" content = "device-width, initial-scale = 1.0">
+</head>
+<body>
+<div style="padding:20px;" id="main-div-profile">
+    <div id="buy-offsets-div1">
+        <div id="contentOffsets">
+            <div class="profile-top-bar">
+                <div>
+                    {% if userprofile.profile_picture %}
+                        <img class="profileIcon" src="{{userprofile.profile_picture.url}}" alt="Profile" style="max-height:150px;max-width:150px;margin-right:10px;border-radius:50px;"/><br/>
+                    {% else %}
+                        <img class="profileIcon" src="{% static 'myCarbonApp/img/person.jpeg' %}"/><br/>
+                    {% endif %}
+                </div>
+                <div>
+                    {% if userprofile.username %}
+                        <h1 style="font-size:60px">{{userprofile.username}}'s Profile</h1>
+                    {% else %}
+                        <h1 style="font-size:60px">No User Profile !??!</h1>
+                    {% endif %}
+                    <h5>I Want to support forest conservation, forest dependent communities, and help combat global climate change</h5>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div style="text-align:center;">
+        <div class="profile-mini-div">
+            {% if userprofile.profile_picture %}
+                <img class="profileIcon" src="{{userprofile.profile_picture.url}}" alt="Profile" style="max-height:300px;max-width:300px;margin:40px;border-radius:20px;"/><br/>
+            {% else %}
+                <img class="profileIcon" src="{% static 'myCarbonApp/img/person.jpeg' %}"/><br/>
+            {% endif %}
+            <button class="btn-profile" onclick="openImageUpdate()">Update Profile Image</button>
+            <div id="image-upload" class="upload-field">
+                <form method="POST" enctype="multipart/form-data">
+                    {% csrf_token %}
+                    <input type="file" name="profile_picture" id="profile_picture"><br/>
+                    <input name="image-profile" type = "submit" class="btn" value="Update"/>
+                    <button type = "button" class="btn-cancel-profile" onclick="closeImageUpdate()">  X  </button>
+                </form>
+            </div>
+        </div>
+        <div class="profile-mini-div">
+            <h3>{{userprofile.email}}</h3>
+            <button class="btn-profile" onclick="openEmailUpdate()">Change Email</button>
+            <div id="email-upload" class="upload-field">
+                <form method="POST">
+                    {% csrf_token %}
+                    <input type="email" name="email" id="email" class="profile-update-input" placeholder="Enter email"><br/>
+                    <input name="email-profile" type = "submit" class="btn" value="Update"/>
+                    <button type = "button" class="btn-cancel-profile" onclick="closeEmailUpdate()">  X  </button>
+                </form>
+            </div>
+        </div>
+        <div class="profile-mini-div">
+            <h3>{{userprofile.username}}</h3>
+            <button class="btn-profile" onclick="openUsernameUpdate()">Change Username</button>
+            <div id="username-upload" class="upload-field">
+                <form method="POST">
+                    {% csrf_token %}
+                    <input type="text" name="username" id="username" class="profile-update-input" placeholder="Enter username"><br/>
+                    <input name="username-profile" type = "submit" class="btn" value="Update"/>
+                    <button type = "button" class="btn-cancel-profile" onclick="closeUsernameUpdate()">  X  </button>
+                </form>
+            </div>
+        </div>
+        <div class="profile-mini-div">
+            <h3>{{userprofile.phone}}</h3>
+            <button class="btn-profile" onclick="openPhoneUpdate()">Change Phone Number</button>
+            <div id="phone-upload" class="upload-field">
+                <form method="POST">
+                    {% csrf_token %}
+                    <input type="text" name="phone" id="phone" class="profile-update-input" placeholder="2547********"><br/>
+                    <input name="phone-profile" type = "submit" class="btn" value="Update"/>
+                    <button type = "button" class="btn-cancel-profile" onclick="closePhoneUpdate()">  X  </button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div>
+        <div>
+            <div id="footer" class="footer" style="color:white;">
+                <div id = "contacts" class = "row-md-6">
+                    <h2 style="text-align:center;color:#a3bded;">Contact Us For More</h2>
+                    <address style = "font-family:sans-serif;">
+                    <table>
+                        <tr>
+                            <td><a class="contactsText" href = "mailto:taicorp254@gmail.com" target = "_blank"><img class="contactsIcons" src="{% static 'myCarbonApp/img/gmail.PNG' %}"/>Gmail</a></td>
+                            <td><a class="contactsText" href = "twitter.com/account/@TAI" target = "_blank"><img class="contactsIcons" src="{% static 'myCarbonApp/img/twitter.PNG' %}"/>Twitter</a></td>
+                            <td><a class="contactsText" href = "" target = "_blank"><img class="contactsIcons" src="{% static 'myCarbonApp/img/facebook.PNG' %}"/>Facebook</a></td>
+                            <td><a class="contactsText" href = "tel:+2547********" target = "_blank"><img class="contactsIcons" src="{% static 'myCarbonApp/img/phone.png' %}"/>Phone</a></td>
+                        </tr>
+                    </table>
+                    </address>
+
+                </div>
+                <div>
+                    <p style="font-size:15px;text-align:left;">Invest a Tree is a Kenyan-based business that aims to promote sustainable farming practices and combat climate change.
+                Our decentralized platform allows individuals and businesses to easily purchase carbon offsets from smallholder farmers in Kenya.
+                In addition, we provide tree management services to ensure the survival and growth of planted trees.
+                We also offer fundraising option for tree planting campaigns, allowing individuals and organizations to contribute to reforestation
+                efforts in Kenya.</p>
+                </div>
+                <div style="text-align:center">
+                    <button onclick = "window.location.href = '#main-div-profile'" class="page-direction"><img class="page-direction-image" alt="Back to the top" src="{% static 'myCarbonApp/img/upArrow.PNG' %}"/></button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script type = "text/javascript">
+function openImageUpdate()
+{
+	document.getElementById("image-upload").style.display="block";
+}
+function closeImageUpdate()
+{
+	document.getElementById("image-upload").style.display="none";
+}
+function openEmailUpdate()
+{
+	document.getElementById("email-upload").style.display="block";
+}
+function closeEmailUpdate()
+{
+	document.getElementById("email-upload").style.display="none";
+}
+function openPhoneUpdate()
+{
+	document.getElementById("phone-upload").style.display="block";
+}
+function closePhoneUpdate()
+{
+	document.getElementById("phone-upload").style.display="none";
+}
+function openUsernameUpdate()
+{
+	document.getElementById("username-upload").style.display="block";
+}
+function closeUsernameUpdate()
+{
+	document.getElementById("username-upload").style.display="none";
+}
+</script>
+</body>
+{% endblock %}
+</html>

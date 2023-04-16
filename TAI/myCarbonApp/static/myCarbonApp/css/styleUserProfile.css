@@ -1,0 +1,55 @@
+.btn-profile {
+    color:black;
+    width:fit-content;
+    height:fit-content;
+    border:none;
+    margin-left:20px;
+    margin-right:20px;
+    background-color:#c2e9fb;
+    border-radius:40px;
+}
+.btn-cancel-profile {
+    color:white;
+    width:fit-content;
+    height:fit-content;
+    border:none;
+    margin-left:20px;
+    margin-right:20px;
+    margin-top:10px;
+    background-color:#434343;
+    border-radius:40px;
+    padding-left:10px;
+    padding-right:10px;
+}
+.upload-field {
+    background-color:#c2e9fb;
+    display:block;
+    position:absolute;
+    text-align:center;
+    top:20%;
+    left:50%;
+    transform:translate(-50%, -50%);
+    z-index:100;
+    padding:20px;
+}
+.profile-update-input {
+    border-radius:10px;
+    padding:5px;
+}
+.profile-mini-div {
+    margin:60px;
+    color:green;
+    font-size:25px;
+    padding:20px;
+    position:relative;
+}
+.profile-mini-div img{
+    width:40%;
+    height:40%;
+    border-radius:40px;
+    margin:20px;
+}
+.profile-top-bar {
+    display:flex;
+    align-items:left;
+}

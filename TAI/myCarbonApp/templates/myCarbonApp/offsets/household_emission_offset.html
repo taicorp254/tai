@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+{% block content %}
+{% load static %}
+<head>
+    <meta charset="UTF-8">
+    <title>TAI</title>
+    <link rel="icon" href="{% static 'myCarbonApp/favicon.ico' %}" />
+    <link href = "{% static 'myCarbonApp/bootstrap-5.0.0-beta3-dist/css/bootstrap.css' %}" rel = "stylesheet">
+    <link href = "{% static 'myCarbonApp/bootstrap-5.0.0-beta3-dist/css/bootstrap.min.css' %}" rel = "stylesheet">
+    <link href = "{% static 'myCarbonApp/bootstrap-5.0.0-beta3-dist/css/bootstrap-utilities.css' %}" rel = "stylesheet">
+    <link href = "{% static 'myCarbonApp/css/Style.css' %}" rel = "stylesheet">
+    <link href = "{% static 'myCarbonApp/css/styleOffsetNow.css' %}" rel = "stylesheet">
+    <meta name = "viewport" content = "device-width, initial-scale = 1.0">
+</head>
+<body>
+<div>
+    <div id="buy-offsets-div1">
+        <div id="contentOffsets">
+            <div>
+                <h1 style="font-size:60px">offset your household emissions</h1>
+                <h5>Want to support forest conservation, forest dependent communities, and help combat global climate change</h5>
+            </div>
+        </div>
+    </div>
+    <div class="buy-offsets-mini-div">
+        <div>
+            <p>offset your household emissions</p>
+            <img src="{% static 'myCarbonApp/imgOffsets/house.webp' %}"/>
+        </div>
+        <div>
+            <p>Worth of credits you would like to purchase</p>
+            <form method="post">
+                {% csrf_token %}
+                <label>In Ksh (Kenya Shillings)</label>
+                <input type="number" placeholder="Enter value" name="amount" id="amount"/>
+                <input type="submit" value="Ok"/>
+            </form>
+        </div>
+    </div>
+    <div>
+        <div>
+            <div id="footer" class="footer" style="color:white;">
+                <div id = "contacts" class = "row-md-6">
+                    <h2 style="text-align:center;color:#a3bded;">Contact Us For More</h2>
+
+                    <address style = "font-family:sans-serif;">
+                    <table>
+                        <tr>
+                            <td><a class="contactsText" href = "mailto:taicorp254@gmail.com" target = "_blank"><img class="contactsIcons" src="{% static 'myCarbonApp/img/gmail.PNG' %}"/>Gmail</a></td>
+                            <td><a class="contactsText" href = "twitter.com/account/@TAI" target = "_blank"><img class="contactsIcons" src="{% static 'myCarbonApp/img/twitter.PNG' %}"/>Twitter</a></td>
+                            <td><a class="contactsText" href = "" target = "_blank"><img class="contactsIcons" src="{% static 'myCarbonApp/img/facebook.PNG' %}"/>Facebook</a></td>
+                            <td><a class="contactsText" href = "tel:+2547********" target = "_blank"><img class="contactsIcons" src="{% static 'myCarbonApp/img/phone.png' %}"/>Phone</a></td>
+                        </tr>
+                    </table>
+                    </address>
+
+                </div>
+                <div>
+                    <p style="font-size:15px;text-align:left;">Invest a Tree is a Kenyan-based business that aims to promote sustainable farming practices and combat climate change.
+                Our decentralized platform allows individuals and businesses to easily purchase carbon offsets from smallholder farmers in Kenya.
+                In addition, we provide tree management services to ensure the survival and growth of planted trees.
+                We also offer fundraising option for tree planting campaigns, allowing individuals and organizations to contribute to reforestation
+                efforts in Kenya.</p>
+                </div>
+                <div style="text-align:center">
+                    <button onclick = "window.location.href = '#overall_offsets'" class="page-direction"><img class="page-direction-image" alt="Back to the top" src="{% static 'myCarbonApp/img/upArrow.PNG' %}"/></button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+{% endblock %}
+</html>

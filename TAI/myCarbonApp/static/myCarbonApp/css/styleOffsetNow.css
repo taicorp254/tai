@@ -1,0 +1,52 @@
+#buy-offsets-page {
+    text-align:center;
+    font-type:Sans-serif;
+
+}
+#contentOffsets {
+    z-index:20;
+    color:#66FF00;
+    margin:10px;
+}
+#overall_offsets {
+	background-color:transparent;
+	height:100%;
+	width:100%;
+	padding-top:100px;
+	top:0;
+	bottom:0;
+	right:0;
+	overflow:auto;
+	left:0;
+	position:relative;
+}
+#footer {
+    background-color:grey;
+    width:vw;
+}
+#newsLOffset{
+    padding:10px;
+    padding-top:50px;
+    text-align:center;
+    color:white;
+    font-size:20px;
+    height:100%;
+}
+#buy-offsets-div1{
+    background-image:url("../img/img2.jpg");
+    padding:30px;
+}
+.buy-offsets-mini-div {
+    margin:40px;
+    color:green;
+    font-size:30px;
+}
+.buy-offsets-mini-div img{
+    width:40%;
+    height:40%;
+    border-radius:40px;
+}
+a {
+    text-decoration:none;
+    color:green;
+}

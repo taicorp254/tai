@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+{% block content %}
+{% load static %}
+<head>
+<title>TAI</title>
+<link rel="icon" href="{% static 'myCarbonApp/favicon.ico' %}" />
+<link href = "{% static 'myCarbonApp/bootstrap-5.0.0-beta3-dist/css/bootstrap.css' %}" rel = "stylesheet">
+<link href = "{% static 'myCarbonApp/bootstrap-5.0.0-beta3-dist/css/bootstrap.min.css' %}" rel = "stylesheet">
+<link href = "{% static 'myCarbonApp/bootstrap-5.0.0-beta3-dist/css/bootstrap-utilities.css' %}" rel = "stylesheet">
+<link href = "{% static 'myCarbonApp/css/Style.css' %}" rel = "stylesheet">
+<link href = "{% static 'myCarbonApp/css/styleOffsetNow.css' %}" rel = "stylesheet">
+
+<meta name = "viewport" content = "device-width, initial-scale = 1.0">
+
+</head>
+<body>
+<div class = "container" id = "overall_background">
+    <div id = "overall_background2">
+        <div class = "column" id = "cde">
+            <div id = "div1" class = "row-md-6">
+                <div class="slideshow">
+                    <h1 id="mainTitle">Welcome to TAI</h1></br>
+                    <h3 style="color:#c2e9fb;margin-left:30px;">Redefining Forests</h3>
+                    <div id="my-form">
+                        <form class="form_container" method="POST">
+                            {% csrf_token %}
+                            <h2>Login</h2>
+                            <label><b>Username</b></label><br/>
+                            {{loginForm.username}}<br/>
+                            <label><b>Password</b></label><br/>
+                            {{loginForm.password}}<br/>
+                            <input style="margin-top:10px;" name="log_in" type = "submit" class="btn" value="Login"/><br/>
+                            <button type = "button" class="btn-cancel" onclick="closeForm();">Cancel</button>
+                        </form>
+                    </div>
+                    <div id="my-form2">
+                        <form class="form_container" method="POST">
+                            {% csrf_token %}
+                            <h2>Sign-Up</h2>
+                            <label><b>Email</b></label><br/>
+                            <input type="text" name="email" placeholder="Enter Email" id="email" required/><br/>
+                            <label><b>Username</b></label><br/>
+                            <input type="text" name="username" placeholder="Enter Username" id="username" required/><br/>
+                            <label><b>Phone</b></label><br/>
+                            <input type="text" name="phone" placeholder="+2547********" id="phone" required/><br/>
+                            <label><b>Password</b></label><br/>
+                            <input type="password" name="password" placeholder="Enter Password" id="password" required/><br/>
+                            <input style="margin-top:10px;" name="sign_up" type = "submit" class="btn" value="Join"/>
+                            <button type = "button" class="btn-cancel" onclick="closeForm2();">Cancel</button>
+                        </form>
+                    </div>
+                    <p id="mainDescription">%document the main description here%</p>
+                    <button onclick = "openForm();" id = "buttonStyleLogin">LOGIN</button>
+                    <button onclick = "openForm2();" id = "buttonStyleSignup">SIGN-UP</button><br/>
+                    <div style="margin-left:50px;">
+                        {% if request.user.is_authenticated %}
+                            <a href="{% url 'myCarbonApp:home' %}" style="text-decoration:underline;color:#c2e9fb;">Enter, You Are Already Logged In</a>
+                        {% else %}
+                            <h5 style="color:white;">{{ message.message }}</h5>
+                            <h6 style="color:white;">Or</h6>
+                            <a href="{% url 'myCarbonApp:home' %}" style="text-decoration:underline;color:#c2e9fb;">Enter and sign-up later</a>
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+<script type = "text/javascript">
+function openForm()
+{
+	document.getElementById("my-form").style.display="block";
+}
+function closeForm()
+{
+	document.getElementById("my-form").style.display="none";
+}
+function openForm2()
+{
+	document.getElementById("my-form2").style.display="block";
+}
+function closeForm2()
+{
+	document.getElementById("my-form2").style.display="none";
+}
+</script>
+</body>
+{% endblock %}
+</html>
